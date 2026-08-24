@@ -19,3 +19,5 @@ A custom x86 operating system built from scratch for an academic presentation, f
 2. Run it using QEMU:
    ```bash
    qemu-system-x86_64 -cdrom vgos_final.iso
+## 📚 Acknowledgments & References
+* **[OSDev Wiki](https://wiki.osdev.org/)** - For providing invaluable tutorials, documentation, and the foundational "Bare Bones" guide used to build this operating system.
