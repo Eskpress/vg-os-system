@@ -1,4 +1,4 @@
-# Vg OS 🚀
+# VG OS 🚀
 
 A custom x86 operating system built from scratch for an academic presentation, featuring a custom bootloader, custom kernel, and basic keyboard input handling.
 
