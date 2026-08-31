@@ -7,8 +7,8 @@
 A custom x86 operating system built from scratch for an academic presentation, featuring a custom bootloader, custom kernel, and a graphical user interface.
 
 ## 📋 Features
-* **Custom Bootloader:** Configured using GRUB[cite: 1].
-* **Custom Kernel:** Written in C and Assembly, running in protected mode[cite: 1].
+* **Custom Bootloader:** Configured using GRUB.
+* **Custom Kernel:** Written in C and Assembly, running in protected mode.
 * **VESA/Framebuffer Graphical Output:** Direct linear framebuffer rendering supporting high-resolution graphics and custom image/logo rendering.
 * **GRUB Multiboot Graphics:** Configured via multiboot header specifications to initialize native graphical modes directly at boot.
 
