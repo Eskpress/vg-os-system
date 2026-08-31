@@ -4,13 +4,13 @@
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
 # VG OS 🚀
 
-A custom x86 operating system built from scratch for an academic presentation, featuring a custom bootloader, custom kernel, and basic keyboard input handling.
+A custom x86 operating system built from scratch for an academic presentation, featuring a custom bootloader, custom kernel, and a graphical user interface.
 
 ## 📋 Features
 * **Custom Bootloader:** Configured using GRUB.
 * **Custom Kernel:** Written in C and Assembly, running in protected mode.
-* **Video Memory Text Output:** Direct VGA buffer rendering (`0xB8000`) for logos and text prompts.
-* **Keyboard Support:** Basic interrupt/scancode mapping for keyboard interaction.
+* **VESA/Framebuffer Graphical Output:** Direct linear framebuffer rendering supporting high-resolution graphics and custom image/logo rendering.
+* **GRUB Multiboot Graphics:** Configured via multiboot header specifications to initialize native graphical modes directly at boot.
 
 ## 🛠️ Technologies Used
 * **C & Assembly (x86)**
