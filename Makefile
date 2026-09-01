@@ -5,15 +5,30 @@ ASFLAGS = --32
 LD = ld
 LDFLAGS = -m elf_i386 -T linker.ld
 
-OBJS = boot.o kernel.o render.o keyboard.o strutil.o logo.o
+OBJS = boot.o kernel.o Render/render.o keyboard/keyboard.o strutil.o logo.o comandos/comandos.o
 
 all: meuos.bin
 
 boot.o: boot.s
 	$(AS) $(ASFLAGS) $< -o $@
 
-%.o: %.c
+kernel.o: kernel.c
+	$(CC) $(CFLAGS) -IRender -Ikeyboard -Icomandos -c $< -o $@
+
+strutil.o: strutil.c
 	$(CC) $(CFLAGS) -c $< -o $@
+
+logo.o: logo.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+Render/render.o: Render/render.c
+	$(CC) $(CFLAGS) -I. -IRender -c $< -o $@
+
+keyboard/keyboard.o: keyboard/keyboard.c
+	$(CC) $(CFLAGS) -Ikeyboard -c $< -o $@
+
+comandos/comandos.o: comandos/comandos.c
+	$(CC) $(CFLAGS) -Icomandos -IRender -I. -c $< -o $@
 
 meuos.bin: $(OBJS)
 	$(LD) $(LDFLAGS) -o $@ $(OBJS)
